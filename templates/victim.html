@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login & Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Login Page Styles */
+        .login-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #666;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #555;
+        }
+
+        /* Dashboard Page Styles */
+        .dashboard {
+            padding: 2rem;
+        }
+
+        .dashboard-title {
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .log-table {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .log-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .log-table th,
+        .log-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .log-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .log-table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .log-table tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
+    <!-- Login Page -->
+    <div class="login-container">
+        <div class="login-card">
+            <h1 class="login-title">VICTIM</h1>
+            <form class="login-form">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div class="dashboard">
+        <h1 class="dashboard-title">LOG</h1>
+        <div class="log-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ENDPOINT</th>
+                        <th>BRCH ID</th>
+                        <th>VERSION</th>
+                        <th>RESULT</th>
+                        <th>TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENDPOINT</td>
+                        <td>3773</td>
+                        <td>2024.03.03.0</td>
+                        <td>X</td>
+                        <td>2024-03-06 14:17:22</td>
+                    </tr>
+                    <tr>
+                        <td>ENDPOINT</td>
+                        <td>1195</td>
+                        <td>2024.03.03.0</td>
+                        <td>X</td>
+                        <td>2024-03-06 14:16:55</td>
+                    </tr>
+                    <tr>
+                        <td>ENDPOINT</td>
+                        <td>6089</td>
+                        <td>2024.03.03.0</td>
+                        <td>X</td>
+                        <td>2024-03-06 14:16:22</td>
+                    </tr>
+                    <tr>
+                        <td>ENDPOINT</td>
+                        <td>0991</td>
+                        <td>2024.03.03.0</td>
+                        <td>X</td>
+                        <td>2024-03-06 14:15:48</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
